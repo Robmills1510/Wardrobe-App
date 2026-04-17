@@ -1,0 +1,19 @@
+import React from 'react'; 
+import { createStackNavigator } from '@react-navigation/stack';
+
+import ClosestScreen from '../screens/ClosestScreen';
+import UploadScreen from '../screens/UploadScreen';
+import OutfitScreen from '../screens/OutfitScreen';
+
+const Stack = createNativeStackNavigator();
+
+export default function StackNavigator() {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen name="Closest" component={ClosestScreen} />
+            <Stack.Screen name="Upload" component={UploadScreen} />
+            <Stack.Screen name="Outfit" component={OutfitScreen} />
+        </Stack.Navigator>
+    );
+}
+
